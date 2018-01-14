@@ -1,25 +1,47 @@
-# README
+![25529965_474101729657424_1735068177_n](https://user-images.githubusercontent.com/20185117/34916060-9979680a-f974-11e7-910b-6931b733df6d.png)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 【学生限定】Rails5.2を先取りして、Wikiアプリを作ろう！
 
-Things you may want to cover:
+![25593088_474101202990810_650318857_o](https://user-images.githubusercontent.com/20185117/34916061-99a50c3a-f974-11e7-9db9-8f766c3dcbda.jpg)
 
-* Ruby version
+## イベント内容
 
-* System dependencies
+* RailsでWikiアプリを作る
+* Rails5.2.0.beta2(最新版)でActiveStorageを使ってアイコン画像をアップロード
+* Ruby2.5を使う
+* マークダウン対応
 
-* Configuration
 
-* Database creation
+※ 事前に開発環境を整えておいてください。
 
-* Database initialization
+## タイムテーブル
 
-* How to run the test suite
+時間|内容
+---|---
+12:45〜|受付開始
+13:00|イベント開始
+13:10〜13:20|会社説明
+13:30〜14:00|作るWebアプリの大枠の説明
+14:00 〜17:00|ハンズオン
+17:00〜17:50|懇親会
+18:00|完全撤収
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## 開催場所
 
-* ...
-# stmn-study-4th
+* 会場：株式会社スタメン 名古屋本社
+* 住所：愛知県名古屋市中村区井深町1-1
+
+## 備考
+
+* Wi-Fi: あり
+* 電源: あり(人数分はありませんので、譲り合ってご利用ください)
+
+## 株式会社スタメンについて
+
+株式会社スタメンは2016年8月に事業を開始した名古屋発のスタートアップです。
+中心として取り組んでいる事業領域は「リアルとITの融合」です。自分たちにしかできない「期待を超える＝感動」のエッセンスに徹底してこだわっていきます。 
+現在は創業事業である、エンゲージメント経営コンサルティング「TUNAG」の拡大に励んでいます！
+「会社が好きな社員で溢れる会社は強い」「社員同士の繋がりが深い会社は強い」そのような昔からある価値観を実現するためのサービスがTUNAGです。 
+詳しいサービス内容についてはぜひこちらの動画をご覧ください！ 
+https://www.youtube.com/watch?v=TG0H57FXD_c
