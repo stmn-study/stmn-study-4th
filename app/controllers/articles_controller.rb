@@ -5,13 +5,15 @@ class ArticlesController < ApplicationController
     @articles = Article.all
   end
 
-  def show; end
+  def show;
+  end
 
   def new
     @article = Article.new
   end
 
-  def edit; end
+  def edit;
+  end
 
   def create
     @article = Article.new(article_params)
@@ -33,11 +35,8 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    @article.destroy
-    respond_to do |format|
-      format.html {redirect_to articles_url, notice: 'Article was successfully destroyed.'}
-      format.json {head :no_content}
-    end
+    @article.destroy!
+    redirect_to articles_url, notice: 'Article was successfully destroyed.'
   end
 
   def upload
