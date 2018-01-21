@@ -18,4 +18,5 @@
 
 .byebug_history
 /vendor/bundle
+/storage
 .idea/
