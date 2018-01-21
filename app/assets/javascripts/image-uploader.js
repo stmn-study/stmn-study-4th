@@ -9,7 +9,6 @@ $(function () {
     uploadMethod: 'POST',
     allowedTypes: ['image/jpeg', 'image/png', 'image/jpg', 'image/gif'],
     extraParams: {'authenticity_token': $token},
-    jsonFieldName: 'filename',          // レスポンスに設定するURLの項目名
-    urlText: '[image:{filename}]'  // Drag&Dropしたら、カスタムタグを作成
+    urlText: '[image:{filename}]'
   });
 });
