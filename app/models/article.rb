@@ -8,17 +8,16 @@ class Article < ApplicationRecord
   end
 
   def create_attachments
-    temp_blobs.each do |temp_blob|
-      images.create!(blob: temp_blob)
+    blobs.each do |temp_blob|
+      images.find_or_create_by!(blob: temp_blob)
     end
   end
 
-  def temp_blobs
+  def blobs
     image_tags.map {|signed_id| ActiveStorage::Blob.find_signed(signed_id)}
   end
 
-  private
   def image_tags
-    body.scan(self.class.image_tag_regex)
+    body.scan(self.class.image_tag_regex).flatten
   end
 end

@@ -21,11 +21,6 @@
     <%= form.text_area :body, rows: 10, data: { fileupload_url: upload_articles_path } %>
   </div>
 
-  <div class="field">
-    <%= form.label :images %>
-    <%= form.file_field :images, multiple:true %><br>
-  </div>
-
   <div class="actions">
     <%= form.submit %>
   </div>
