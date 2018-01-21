@@ -3,18 +3,18 @@ class Article < ApplicationRecord
 
   class << self
     def image_tag_regex
-      /\[image:([a-zA-Z0-9]+)\]/
+      /\[article_image:([a-zA-Z0-9-]+)\]/
     end
   end
 
-  def attach_image
+  def create_attachments
     temp_blobs.each do |temp_blob|
       images.create!(blob: temp_blob)
     end
   end
 
   def temp_blobs
-    image_tags.map {|key| ActiveStorage::Blob.find_by(key: key)}
+    image_tags.map {|signed_id| ActiveStorage::Blob.find_signed(signed_id)}
   end
 
   private

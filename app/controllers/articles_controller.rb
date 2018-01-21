@@ -15,16 +15,16 @@ class ArticlesController < ApplicationController
   def edit
   end
 
-  def blob
+  def upload
     file = params[:file]
     @blob = ActiveStorage::Blob.create_after_upload!(io: file, filename: file.original_filename)
-    render json: {files: [{key: @blob.id, name: @blob.filename, url: @blob.service_url}], filename: @blob.key}
+    render json: {filename: @blob.signed_id}
   end
 
   def create
     @article = Article.new(article_params)
     if @article.save
-      @article.attach_image
+      @article.create_attachments
       redirect_to root_path
     else
       render :new
