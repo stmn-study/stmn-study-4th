@@ -7,7 +7,7 @@
 
 <p>
   <strong>Body:</strong>
-  <%= @article.body %>
+  <%= markdown(@article.body) %>
 </p>
 
 <% if @article.images.attached? %>
