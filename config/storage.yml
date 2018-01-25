@@ -1,12 +1,8 @@
 local:
   service: Disk
   root: <%= Rails.root.join("storage") %>
+  host: ec2-184-73-201-79.compute-1.amazonaws.com
 
 test:
   service: Disk
   root: <%= Rails.root.join("tmp/storage") %>
-
-amazon:
-  service: S3
-  access_key_id: ""
-  secret_access_key: ""
