@@ -1,28 +1,37 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
-<h1>Articles</h1>
+  <h1>記事一覧</h1>
 
-<table>
-  <thead>
+  <table class="table-bordered">
+    <thead>
     <tr>
-      <th>Title</th>
-      <th>Body</th>
+      <th>タイトル</th>
+      <th>内容</th>
       <th colspan="3"></th>
     </tr>
-  </thead>
+    </thead>
 
-  <tbody>
-    <% @articles.each do |article| %>
+    <tbody>
+    <% if @articles.present? %>
+      <% @articles.each do |article| %>
+        <tr>
+          <td><%= article.title %></td>
+          <td><%= markdown(article.body) %></td>
+          <td><%= link_to 'Show', article, class: "btn btn-primary" %></td>
+          <td><%= link_to 'Edit', edit_article_path(article), class: "btn btn-success" %></td>
+          <td><%= link_to 'Destroy', article, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-danger" %></td>
+        </tr>
+      <% end %>
+    <% else %>
       <tr>
-        <td><%= article.title %></td>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td colspan="5">記事がありません</td>
       </tr>
     <% end %>
-  </tbody>
-</table>
+    </tbody>
+  </table>
 
-<br>
+  <br>
 
-<%= link_to 'New Article', new_article_path %>
+  <%= link_to 'New Article', new_article_path, class: "btn btn-primary" %>
+</div>

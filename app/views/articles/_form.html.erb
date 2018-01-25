@@ -4,24 +4,28 @@
       <h2><%= pluralize(article.errors.count, "error") %> prohibited this article from being saved:</h2>
 
       <ul>
-      <% article.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% article.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div class="form-group">
+    <div class="field">
+      <%= form.label :title, "タイトル" %>
+      <%= form.text_field :title, class: "form-control" %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body, rows: 10, data: { fileupload_url: upload_articles_path } %>
+  <div class="form-group">
+    <div class="field">
+      <%= form.label :body, "内容" %>
+      <%= form.text_area :body, rows: 10, data: {fileupload_url: upload_articles_path}, class: "form-control" %>
+    </div>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit("作成", class:"btn btn-primary") %>
   </div>
 <% end %>
