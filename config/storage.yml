@@ -1,7 +1,7 @@
 local:
   service: Disk
   root: <%= Rails.root.join("storage") %>
-  host: ec2-184-73-201-79.compute-1.amazonaws.com
+  host: safe-badlands-82410.herokuapp.com
 
 test:
   service: Disk
