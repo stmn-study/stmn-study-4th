@@ -1,5 +1,9 @@
 <div class="container">
-  <p id="notice"><%= notice %></p>
+  <% if notice.present? %>
+    <div class="alert alert-warning m-3" role="alert">
+      <%= notice %>
+    </div>
+  <% end %>
 
   <div class="card">
     <h5 class="card-header"><%= @article.title %></h5>

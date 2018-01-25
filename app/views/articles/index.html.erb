@@ -1,5 +1,9 @@
 <div class="container">
-  <p id="notice"><%= notice %></p>
+  <% if notice.present? %>
+    <div class="alert alert-warning m-3" role="alert">
+      <%= notice %>
+    </div>
+  <% end %>
 
   <h1>記事一覧</h1>
 
@@ -27,5 +31,7 @@
 
   <br>
 
-  <%= link_to '新しい記事', new_article_path, class: "btn btn-primary" %>
+  <div class="m-3">
+    <%= link_to '新しい記事', new_article_path, class: "btn btn-primary" %>
+  </div>
 </div>
