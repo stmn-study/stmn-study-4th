@@ -12,7 +12,7 @@ class RenderCustomHtml < Redcarpet::Render::HTML
     full_document.gsub!(Article.image_tag_regex) do
       blob = ActiveStorage::Blob.find_signed($1)
       if blob.present?
-        "<img src='#{blob.service_url}'/>"
+        "<img src='#{blob.service_url}' width='400px'/>"
       else
         ''
       end
