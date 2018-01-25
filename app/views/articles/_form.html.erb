@@ -13,19 +13,19 @@
 
   <div class="form-group">
     <div class="field">
-      <%= form.label :title %>
+      <%= form.label :title, "タイトル" %>
       <%= form.text_field :title, class: "form-control" %>
     </div>
   </div>
 
   <div class="form-group">
     <div class="field">
-      <%= form.label :body %>
+      <%= form.label :body, "内容" %>
       <%= form.text_area :body, rows: 10, data: {fileupload_url: upload_articles_path}, class: "form-control" %>
     </div>
   </div>
 
   <div class="actions">
-    <%= form.submit(class:"btn btn-primary") %>
+    <%= form.submit("作成", class:"btn btn-primary") %>
   </div>
 <% end %>
