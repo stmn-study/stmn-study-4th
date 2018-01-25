@@ -9,6 +9,6 @@ $(function () {
     uploadMethod: 'POST',
     allowedTypes: ['image/jpeg', 'image/png', 'image/jpg', 'image/gif'],
     extraParams: {'authenticity_token': $token},
-    urlText: '[article_image:{filename}]'
+    urlText: '![article-image:{filename}]'
   });
 });
