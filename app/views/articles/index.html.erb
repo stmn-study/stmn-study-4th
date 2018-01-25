@@ -5,20 +5,22 @@
 
   <% if @articles.present? %>
     <% @articles.each_slice(2) do |articles| %>
-      <div class="row m-b10">
-        <% articles.each do |article| %>
-          <div class="col-sm-6">
-            <div class="card">
-              <h5 class="card-header"><%= article.title %></h5>
-              <div class="card-body">
-                <p class="card-text"><%= markdown(article.body) %></p>
-                <%= link_to 'Show', article, class: "btn btn-primary" %>
-                <%= link_to 'Edit', edit_article_path(article), class: "btn btn-success" %>
-                <%= link_to 'Destroy', article, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-danger" %>
+      <div class="mt-3">
+        <div class="row">
+          <% articles.each do |article| %>
+            <div class="col-sm-6">
+              <div class="card">
+                <h5 class="card-header"><%= article.title %></h5>
+                <div class="card-body">
+                  <p class="card-text"><%= markdown(article.body) %></p>
+                  <%= link_to 'Show', article, class: "btn btn-primary" %>
+                  <%= link_to 'Edit', edit_article_path(article), class: "btn btn-success" %>
+                  <%= link_to 'Destroy', article, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-danger" %>
+                </div>
               </div>
             </div>
-          </div>
-        <% end %>
+          <% end %>
+        </div>
       </div>
     <% end %>
   <% end %>
