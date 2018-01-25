@@ -3,7 +3,7 @@ class Article < ApplicationRecord
 
   class << self
     def image_tag_regex
-      /\[article-image:([a-zA-Z0-9-]+)\]/
+      /!\[article-image:([a-zA-Z0-9-]+)\]/
     end
   end
 
