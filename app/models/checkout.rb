@@ -4,6 +4,6 @@ class Checkout
   end
 
   def twice
-    false
+    true
   end
 end
